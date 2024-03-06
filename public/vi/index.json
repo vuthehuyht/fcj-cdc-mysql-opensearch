@@ -1,0 +1,120 @@
+[
+{
+	"uri": "//localhost:1313/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Tổng quan Các bạn có thể tham khảo pattern này để áp dụng cho dự án phát triển bằng Spring Framework hoặc có thể tuỳ chỉnh theo yêu cầu của dự án hay yêu cầu mà các bạn đề ra. Flow cơ bản của pattern như sau: đóng gói ứng dụng Java thành image, scan bảo mật image, tải image lên Amazon ECR và cuối cùng là triển khai image lên Amazon EKS. Pattern này cũng rất hữu ích khi muốn chuyển từ monolithic sang kiến trúc microservices lên EKS hoặc ECS, giúp giám sát và quản lý toàn bộ vòng đời của ứng dụng Java, bảo đảm mức độ tự động hoá cao hơn và tránh gặp lỗi.\nNội dung Giới thiệu Các bước chuẩn bị Tạo EKS cluster Tạo RDS Tạo luồng CI/CD Tạo SNS để nhận thông báo Tạo ELB truy cập tới ứng dụng Java Dọn dẹp tài nguyên Chúng ta cùng bắt tay làm nào. Let\u0026rsquo;s go!!!!\n"
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.1-createnewuser/",
+	"title": "Tạo user với quyền admin",
+	"tags": [],
+	"description": "",
+	"content": " Đầu tiên, chúng ta tạo user mới với quyền admin Truy cập AWS Mangament Console Tìm IAM Chọn IAM Trong giao diện IAM, chọn User Khi vào tới giao diện của User, chọn Create User\nTrong giao diện Create uer Tại ô Username, ta điền một username bất kỳ mà bạn muốn. Lưu ý: Chúng ta nên chọn một username dễ nhớ, tránh trường hợp chọn username phức tạp và chúng ta quên ngay sau đó. Ở dòng Provide user access to the AWS Management Console, chúng ta tick vào đó Chọn I want to create an IAM user, mục đích của chúng ta là tạo user nên ta sẽ chọn dòng này. Để tạo mật khẩu tuỳ ý, ta chọn Custom password Bỏ chọn dòng Users must create a new password at next sign-in Sau đó chọn Next attach quyền admin cho user mới Chọn Attach policies directly Tim và chọn AdministratorAccess Chọn Next Kiểm tra lại và chọn Create user Sau khi tạo thành công, chúng ta sẽ chuyển qua màn hình dưới đây "
+},
+{
+	"uri": "//localhost:1313/vi/",
+	"title": "Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS",
+	"tags": [],
+	"description": "",
+	"content": "Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS Tổng quan Đây là workshop đầu tay của mình khi tham gia First Cloud Journey. Trong workshop này, chúng ta cùng đi tìm hiểu cách tạo pipeline CI/CD liên tục để build và triển khai ứng dựng Java cùng với các biện pháp bảo mật được khuyên dùng tới Amazion Elastic Kubernetes Service trên AWS Cloud. Đồng thời cũng tạo một endpoint để có thể truy cập vào ứng dụng Java bằng Elastic Load Balancing.\nLưu ý Workshop này mình cũng sử dụng kha khá các dịch vụ của AWS cho nên các bạn cần có kiến thức cơ bản về một số dịch vụ điển hình để có thể hiểu được. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Tổng quan Trước khi bắt tay vào việc triển khai pattern chúng ta cần chuẩn bị một vài thứ.\nLưu ý Workshop này mình cũng sử dụng kha khá các dịch vụ của AWS cho nên các bạn cần có kiến thức cơ bản về một số dịch vụ điển hình của AWS để có thể hiểu được. Thêm một chút kiến thức về CI/CD Hiểu biết cơ bản về docker và kubernetes Chúng ta cùng bắt tay làm nào. Let\u0026rsquo;s go!!!!\nNội dung Tạo user quyền admin Tạo repository Tạo container registry Tạo database Tạo role Tạo EKS cluster Thêm node group vào eks cluster "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.2-createrepository/",
+	"title": "Tạo repository",
+	"tags": [],
+	"description": "",
+	"content": " Chuyển hướng CodeCommit Trên ô tìm kiếm, tìm và chọn CodeCommit Tại giao diện CodeCommit Chọn Create repository Điền tên Repository Repository name, điền fcj-devops-aws Description, điền mô tả của repository (có thể bỏ qua) Sau đó, chọn Next "
+},
+{
+	"uri": "//localhost:1313/vi/3-pushcodetocodecommit/",
+	"title": "Đẩy source code lên CodeCommit",
+	"tags": [],
+	"description": "",
+	"content": " Đăng nhập lại bằng root account Tìm và chọn IAM -Trong giao diện IAM, chọn User Tìm và chọn user đã tạo ở bước 2.1 Chọn mục Security credentials Kéo xuống đến phần HTTPS Git credentials for AWS CodeCommit, chọn Generate credentials Chọn Download credentials Quay lại CodeCommit để lấy url clone, chọn Clone HTTPS Clone repo về máy, sau đó nhập credential đã tải về trước đó Copy source từ source đến repo vừa clone Push code lên repo bằng các câu lệnh sau: git add . git commit -m \u0026quot;initial project\u0026quot; git push -u origin master Ta kiểm tra lại trên repo xem đã thành công chưa Như hình là chúng ta đã push lên repo thành công Tạo thêm branch dev bằng các command sau: git checkout -b dev git push origin dev "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.3-createecr/",
+	"title": "Tạo container registry",
+	"tags": [],
+	"description": "",
+	"content": " Chuyển hướng Container Registry Trên ô tìm kiếm, tìm và chọn ECR Chọn Get Started Thiết lập ECR\nVisibility settings: chọn Public Repository name: điền fcj-devops-cr Operating systems: chọn Linux Architectures: chọn ARM 64 và x86-64 "
+},
+{
+	"uri": "//localhost:1313/vi/4-createcodebuild/",
+	"title": "Tạo CodeBuild",
+	"tags": [],
+	"description": "",
+	"content": " Chúng ta sẽ có mindset như sau: Một codebuild sẽ chạy khi có sự kiện push Một codebuild sẽ chạy khi pull request về nhánh master được merged VÌ thế, chúng ta sẽ tạo 2 codebuild project Tạo CodeBuild Project cho sự kiện push Tìm và chọn CodeBuild trên ô tìm kiếm Tại giao diện CodeBuild, chọn Create project Project name: điền fcj-codebuild-push Souce - Primary: chọn AWS CodeCommit Source provider, chọn AWS CodeCommit Repository, chọn fcj-devops-aws, Branch, chọn dev Chọn Next Kéo xuống đến mục Buildspec, chọn Use a buildspec file Chọn Create build project Tạo CodeBuild Project cho sự kiện merged PR về nhánh master Tìm và chọn CodeBuild trên ô tìm kiếm Tại giao diện CodeBuild, chọn Create project Project name: điền fcj-merge-pr\nSource provider, chọn AWS CodeCommit\nRepository, chọn fcj-devops-aws,\nBranch, chọn master Kéo xuống đến mục Buildspec, chọn Use a buildspec file\nỞ mục Buildspec name, điền buildspec_docker.yml Chọn Create build project Click vào CodeBuild project vừa tạo ở trên Vì CodeBuild sẽ pull image lưu ở ECR nên ta cần cấp quyền cho CodeBuild có thể truy cập tới ECR, chọn Service role Chọn Add permissions -\u0026gt; Attach policy Tìm và chọn AmazonElasticContainerRegistryPublicFullAccess\nLưu ý: Nếu các bạn tạo ECR public thì policy cần attach là AmazonElasticContainerRegistryPublicFullAccess, ECR private thì policy cần attach là AmazonEC2ContainerRegistryFullAccess Gắn thêm DescribeCluster policy cho role của CodeBulid\nTại giao diện sau thêm policy mới xong, Chọn Add permissions -\u0026gt; Create inline policy Chọn Next Policy name. điền describe-cluster-policy\nChọn Create policy "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.4-createrds/",
+	"title": "Tạo database",
+	"tags": [],
+	"description": "",
+	"content": " Chuyển hướng trang tạo Database Trên ô tìm kiếm, tìm và chọn RDS Tại giao diện của RDS Chọn Create database Thiết lập Database Choose a database creation method: chọn Standard create Engine options: chọn MySQL Templates: chọn Free Tier DB instance identifier: điền fcj-database Master password: diền Huyvt2609 Confirm master password: điền Huyvt2609 DB instance class: chọn db.t2.micro Public access: chọn Yes Tại mục Additional configuration Initial database name: điền blog_dev Backup: bỏ chọn Enable automated backups Maintenance: bỏ chọn Enable auto minor version upgrade Các mục khác để mặc định Lưu ý: Quá trình tạo database sẽ diễn ra khá lâu, khoảng 10 phút.\nDo chúng ta sử dụng SG mặc định nên cần sửa một chút Tại tab Connectivity \u0026amp; security, click VPC security groups Tại giao diện Security Groups Chọn Inbound rules -\u0026gt; Edit inbound rules Type: chọn MySQL/Aurora, Source: chọn Anywhere IPv4 Chọn Save rules "
+},
+{
+	"uri": "//localhost:1313/vi/5-createcodepipeline/",
+	"title": "Tạo CodePipeline",
+	"tags": [],
+	"description": "",
+	"content": "Trong phần này, chúng ta tạo một codepipeline để mỗi lần có sự kiện push thì codebuild sẽ tự động chạy build và test cho source code.\nChuyển hướng đến CodePipeline Tìm và chọn CodePipeline trên ô tìm kiếm Trong giao diện CodePipeline Chọn Create pipeline Thiết lập Pipeline Pipeline name, điền fcj-push-pipeline Pipeline type, chọn V1 Chọn Next Source provider: Chọn AWS CodeCommit Repository name: chọn fcj-devops-name Branch name: chọn dev Chọn Next Build provider: chọn AWS CodeBuild Region: sẽ tự động chọn project name, chọn fcj-codebuild-push Chọn Next Chọn Skip deploy stage Kiểm tra lại và chọn Create pipeline Sau khi tạo thành công, pipeline sẽ tự chạy "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.5-createrole/",
+	"title": "Tạo role",
+	"tags": [],
+	"description": "",
+	"content": " Chuyển hướng trang IAM Trên ô tìm kiếm, tìm và chọn IAM Tạo giao diện IAM Chọn Roles Chọn Create role Tạo role cho eks cluster\nTrusted entity type: chọn \u0026ldquo;AWS service\u0026rdquo; Use case: tìm và chọn eks Chọn EKS - Cluster Chọn Next Điền tên role, kiểm tra lại và chọn Create role Làm tương tự để tạo role cho node group Trên ô tìm kiếm, tìm và chọn IAM Chọn Roles Chọn Create role Thiết lập role Trusted entity type: chọn \u0026ldquo;AWS service\u0026rdquo; Use case: tìm và chọn ec2 Chọn Next Tìm và chọn AmazonEKSWorkerNodePolicy Role name: Điền AmazonEKSNodeRole và chọn *Create role "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.6-createekscluster/",
+	"title": "Tạo EKS cluster",
+	"tags": [],
+	"description": "",
+	"content": " Chuyển hướng trang tạo EKS Trên ô tìm kiếm, tìm và chọn EKS Tạo giao diện Amazon Elastic Kubernetes Service Chọn Create cluster Thiếp lập cluster\nName: điền fcj-devops-cluster\nCluster service role: gõ và chọn eksClusterRole, Các mục khác để mặc định, kéo xuống và chọn Next Cluster endpoint access: để dễ dàng, ta chọn Public Chọn Next Chọn Next Chọn Next Kiểm tra lại và chọn Create Lưu ý: Quá trình tạo cluster xong sau 10 phút.\n"
+},
+{
+	"uri": "//localhost:1313/vi/6-createeventbridgerule/",
+	"title": "Tạo EventBridge Rule cho merge PR",
+	"tags": [],
+	"description": "",
+	"content": "Ở đây, hẳn các bạn cũng thắc mắc tại sao mình không tạo pipeline giống như ở bước 5. Pipeline tự động chạy cũng là do EventBridge đứng ở sau, nhưng trong quá trình tạo chúng ta không thấy EventBridge vì nó được tạo ngâm.\nCông việc đầu tiên, chúng ta cần tạo lamda function để kích hoạt codebuild chạy Tìm và chọn Lambda function Chọn Create function Function name, điền fcj-merge-pr-function Runtime, chọn Python3.9 Architecture, chọn x86_64 Chọn Create function Kéo xuống đến mục Code, paste đoạn code sau vào đó import boto3\rimport os\rdef lambda_handler(event, context):\r# Start the build process\rclient = boto3.client(\u0026#39;codebuild\u0026#39;)\rclient.start_build(\rprojectName=\u0026#34;\u0026lt;tên codebuild cho sự kiện merge PR\u0026gt;\u0026#34;,\rsourceVersion=event[\u0026#39;detail\u0026#39;][\u0026#39;sourceReference\u0026#39;]\r) Chọn Deploy Tại mục Configuration, chọn Permission Click vào Role names Tại giao diện, chọn Add permissions -\u0026gt; Attach policies Chúng ta cần thêm policies cho lambda function để có thể access vào trong CodeBuild Tìm và chọn awsCodeBuildDeveloperAccess Sau đó, chọn Next Quay trở lại với role của lambda, chọn Add permissions -\u0026gt; Create policies inline Chọn JSON và đoạn json sau vào policies editor {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;VisualEditor0\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;codecommit:ListPullRequests\u0026#34;,\r\u0026#34;codecommit:GetPullRequest\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:codecommit:*:\u0026lt;AWS account id\u0026gt;:*\u0026#34;\r}\r]\r} Sau đó chọn Next Policy name, điền fcj-lamdba-pr Chọn Create policy Chuyển hướng đến EventBridge Tìm và chọn Amazon EventBridge trên ô tìm kiếm Chọn Create Rule Thiết lập rule Name: điền merge-pr-master-rule Chọn Next Event source: chọn Other Creation method: chọn Custom pattern (JSON editor) Event pattern, paste đoạn json {\r\u0026#34;source\u0026#34;: [\u0026#34;aws.codecommit\u0026#34;],\r\u0026#34;detail-type\u0026#34;: [\u0026#34;CodeCommit Pull Request State Change\u0026#34;],\r\u0026#34;detail\u0026#34;: {\r\u0026#34;event\u0026#34;: [\u0026#34;pullRequestMergeStatusUpdated\u0026#34;],\r\u0026#34;isMerged\u0026#34;: [\u0026#34;True\u0026#34;],\r\u0026#34;destinationReference\u0026#34;: [\u0026#34;refs/heads/master\u0026#34;]\r}\r} Chọn Next Target types: chọn AWS Service Select a target: chọn Lambda function Function: chọn function đã tạo ở bước 1 Chọn Next Chọn Next Kiểm tra lại và chọn Create rule Trở lại lambda function kiểm tra, ta sẽ thấy EventBrigde được thêm ở phần Add trigger "
+},
+{
+	"uri": "//localhost:1313/vi/2-prepare/2.7-addnodegrouptocluster/",
+	"title": "Thêm node group vào cluster",
+	"tags": [],
+	"description": "",
+	"content": " Chuyển hướng trang tạo EKS Trên ô tìm kiếm, tìm và chọn EKS Tạo giao diện Amazon Elastic Kubernetes Service Chọn cluster vừa tạo Chọn mục Compute Kéo xuống, chọn Add node group Thiết lập node group\nName: điền node-1 Node IAM role: tìm và chọn AmazonEKSNodeRole Chọn Next Instance types: tìm và chọn t2.small Node group scaling configuration: toàn bộ điền 1 Desired size: số lượng ec2 sẽ được khởi tạo chạy Minimum size: số lượng ec2 chạy tổi thiểu Maximum size: số lượng ec2 chạy tối đa Chọn Next Kiểm tra lại và chọn Create "
+},
+{
+	"uri": "//localhost:1313/vi/7-configcodebuilddeployeks/",
+	"title": "Thiết lập CodeBuild triển khai image lên EKS",
+	"tags": [],
+	"description": "",
+	"content": "Ở bước này, chúng ta cần hoàn thiện một số thiết lập để CodeBuild có thể triển khai image lên EKS. Let\u0026rsquo;s gooo!\nCập nhật file cấu hình Sau khi database, container registry và kubernetes cluster được tạo xong, chúng ta cần đến các thông tin như sau: database endpoint database username database password container registry repository kubernetes cluster name region Mở file helm/values.yaml trong repo ở local cập nhật lại các giá trị đánh dấu Mở file buildspec_docker.yml trong repo ở local cập nhật lại các giá trị đánh dấu Commit và push lên branch dev bằng command git add . git commit -m \u0026quot;update values.yml file\u0026quot; git push origin dev Thiết lập CodeBuild truy cập đến cluster Chuyển trang đến IAM\nTìm và chọn IAM Chọn User Chọn user đã tạo ở bước 2.1 Chọn tab Security credentials, kéo xuống chọn Create acces key Use case: chọn Command Line Interface (CLI) Cuộn xuống, chọn I understand the above recommendation and want to proceed to create an access key và chọn Next Chọn Create access key Sau khi tạo xong, thu được kết quả Tới dây, các bạn cần cài AWS CLI trên máy, tham khảo cách cài tại đây\nẤn tổ hợp Window + R, gõ cmd, ấn Enter, nhập aws configure\nPaste từng giá trị của Access key và Secret access key vào cmd Update kubeconfig về máy để có thể thao tác với cluster\nTrong cmd, gõ aws eks update-kubeconfig --name \u0026lt;cluster-name\u0026gt;, cluster-name đã tạo ở bước 2.6 Vì user vừa tạo access chưa có quyền access vào cluster, ta cần thiết lập như sau\nTại giao diện cluster đã tạo ở bước [2.6], chọn tab Access Cuộn xuống, chọn Create access entry IAM principal ARN: nhập username đã tạo ở bước 2.1 Cuộn xuống và Chọn Next Chọn Next Chọn Create Tại trang sau khi tạo xong, kéo xuống chọn Add access policy Chọn AmazonEKSClusterAdminPolicy\nClick Add access policy Thiết lập quyền truy cập cho CodeBuild Role, làm tương tự các bước trên đối với role của CodeBuild có tên fcj-merge-pr\nTạo file auth-patch.yml với nội dung:\napiVersion: v1\rdata:\rmapRoles: |\r- group:\r- system:masters\rrolearn: \u0026lt;role arn đã lấy được ở trên\u0026gt;\rusername: build\rkind: ConfigMap Lưu ý, ta bỏ service-role trong role arn, ví dụ: arn:aws:iam:::role/service-role/codebuild-build-push-image-service-role \u0026ndash;\u0026gt; arn:aws:iam:::role/codebuild-build-push-image-service-role\nSau đó chạy command kubectl patch configmap/aws-auth -n kube-system --patch \u0026quot;$(cat \u0026lt;đường dẫn tới file auth-patch.yml\u0026gt;/auth-patch.yml)\u0026quot; Như hình là đã config thành công Tạo PR vào master Tại giao diện của repository, chọn Create pull request Chọn Create pull request Chọn Merge Chọn Merge pull request Sau một khoảng thời gian chơ, CodeBUild cho sự kiện merge đã chạy xong Lấy endpoint để test thành quả Mở cmd, nhập kubectl get svc Lấy \u0026lt;endpoint\u0026gt;/api/v1/demo vào trình duyệt. WOW! Mọi thứ đã hoạt động thật mượt mà =)))))) "
+},
+{
+	"uri": "//localhost:1313/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
