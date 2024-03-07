@@ -43,8 +43,8 @@ Chọn **Next**
     + Chọn **Next**
 ![2.5-step-5-a](../../../images/2.5-step-5-a.png)
 ![2.5-step-5-b](../../../images/2.5-step-5-b.png)
-- Tìm và chọn **AmazonEKSWorkerNodePolicy**
-![2.5-step-5-c](../../../images/2.5step-5-c.png)
-- **Role name**: Điền `AmazonEKSNodeRole` và chọn **Create role*
+- Tìm và chọn **AmazonEKSWorkerNodePolicy**, **AmazonEC2ContainerRegistryFullAccess**, **AmazonEKS_CNI_Policy**
+![2.5-step-5-c](../../../images/2.5-step-6.png)
+- **Role name**: Điền `AmazonEKSNodeRole` và chọn **Create role**
 ![2.5-step-5-d](../../../images/2.5-step-5-d.png)
 ![2.5-step-5-e](../../../images/2.5-step-5-e.png)
