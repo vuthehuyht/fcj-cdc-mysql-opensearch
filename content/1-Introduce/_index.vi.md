@@ -13,7 +13,7 @@ Các bạn có thể tham khảo pattern này để áp dụng cho dự án phá
 Ngoài ra, nếu các có thể tuỳ chỉnh theo ý mình để bài lab có thể hoàn thiện hơn.
 
 Dưới đây là flow
-![GitOps in AWS](../../images/gitops-in-aws.png)
+![GitOps in AWS](../../images/devops-flow.png)
 
 #### Nội dung
 
@@ -24,6 +24,6 @@ Dưới đây là flow
 5. [Tạo CodePipeline](/5-createcodepipeline/)
 6. [Tạo EventBridge Rule cho merge PR](6-createeventbridgerule/)
 7. [Thiết lập CodeBuild triển khai image lên EKS Cluster](7-configcodebuilddeployeks/)
-8. [Dọn dẹp tài nguyên]()
+8. [Dọn dẹp tài nguyên](8-cleanup/)
 
 Chúng ta cùng bắt tay làm nào. Let's go!!!!
