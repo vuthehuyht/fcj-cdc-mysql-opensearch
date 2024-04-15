@@ -31,7 +31,6 @@ Mở CMD tại repo vừa clone, tìm đến file template.yml cập nhật thô
 Sau khi cập nhật xong, chạy command `sam build && sam deploy`
 
 Khi có thông báo **Successfully created/updated stack - lambda in ap-southeast-1** là ta đã triển khai thành công.
+
 Ta kiểm tra trên AWS
 ![2.4-step-1](../../../images/lambda-4.png)
-
-

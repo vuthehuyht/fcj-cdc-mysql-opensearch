@@ -53,13 +53,11 @@ Thiết lập Database
 - **Master password**: diền `Huyvt2609`
 - **Confirm master password**: điền `Huyvt2609`
 - **DB instance class**: chọn db.t2.micro
-- **Virtual private cloud (VPC)**: chọn `cdc-vpc`
 - **Public access**: chọn **Yes**
 - **VPC security group (firewall)**: chọn `cdc-rds-sg`
 - Tại mục **Additional configuration**
     + **DB parameter group**: chọn `cdc-group`
     + **Encryption**:  bỏ chọn **Enable encryption**
-    + **Backup**: bỏ chọn **Enable automated backups**
     + **Maintenance**: bỏ chọn **Enable auto minor version upgrade**
 - Các mục khác để mặc định
 
@@ -73,4 +71,8 @@ Thiết lập Database
 ![2.4-step-1](../../../images/rds-14.png)
 
 **Lưu ý**: Quá trình tạo database sẽ diễn ra khá lâu, khoảng 10 phút.
+
+Sau khi tạo xong, chúng ta cần xác nhận đã Enable MySQL bin log:
+- Kết nối đến RDS bằng terminal: `mysql -h rds_enpoint -u admin -p `, sau đó nhập password
+- Nhập `show global variables like "log_bin"`, néu kết quả **log_bin ON** là ok rồi
 

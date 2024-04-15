@@ -12,21 +12,21 @@
     <title>Các bước chuẩn bị :: Tự động build và deploy ứng dụng Java lên Amazon EKS</title>
 
     
-    <link href="/css/nucleus.css?1713172660" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1713172660" rel="stylesheet">
-    <link href="/css/hybrid.css?1713172660" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1713172660" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1713172660" rel="stylesheet">
-    <link href="/css/auto-complete.css?1713172660" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1713172660" rel="stylesheet">
-    <link href="/css/theme.css?1713172660" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1713172660" rel="stylesheet">
+    <link href="/css/nucleus.css?1713177169" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713177169" rel="stylesheet">
+    <link href="/css/hybrid.css?1713177169" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713177169" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713177169" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713177169" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713177169" rel="stylesheet">
+    <link href="/css/theme.css?1713177169" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713177169" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1713172660" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713177169" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1713172660"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713177169"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1713172660"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1713172660"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713177169"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713177169"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1713172660"></script>
+<script type="text/javascript" src="/js/search.js?1713177169"></script>
 
     
   </div>
@@ -563,7 +563,7 @@
             
           
           
-            <a href='/vi/'>Đồng bộ dữ liệu từ RDS sang Opensearch</a> > Các bước chuẩn bị
+            <a href='/vi/'>Thu thập dữ liệu thay đổi từ RDS sang Opensearch</a> > Các bước chuẩn bị
           
         
           
@@ -579,7 +579,6 @@
     <li>
       <ul>
         <li></li>
-        <li><a href="#aws-vpc">AWS VPC</a></li>
       </ul>
     </li>
   </ul>
@@ -607,13 +606,15 @@
 
 
 
-	<p>Trước khi bắt tay vào triển khai phương pháp này, chúng ta cần bổ sung một xíu kiến thức về một số dịch vụ được sử dụng trong bài lab.</p>
+	<p>Trước khi bắt tay vào triển khai phương pháp này, chúng ta điểm qua về một số dịch vụ được sử dụng trong bài lab.</p>
 <h4 id="aws-rds">AWS RDS</h4>
 <p>Đây là một trong những dịch vụ điển hình của AWS, được sử dụng rất nhiều và rộng rãi. Vì nó phổ biến nên chúng ta sẽ tiếp tục với phần khác. Trong bài lab này, RDS sẽ đóng vai trò là source để lấy data.</p>
 <h4 id="aws-lambda">AWS Lambda</h4>
 <p><strong>AWS Lambda</strong> là một dịch vụ điện toán phi máy chủ, theo định hướng sự kiện (hiểu nôm na là khi nào có request đến thì nó mới chạy), giúp cho chúng ta chạy code hầu hết mọi loại application hoặc backend service mà không cần cung cấp hay quản lý máy chủ. <strong>AWS Lambda</strong> có thể được kích hoạt từ hơn 200 dịch vụ của AWS và các application dưới dạng SaaS và chúng ta chỉ cần trả phí theo mức sử dụng.</p>
 <h4 id="aws-ec2">AWS EC2</h4>
-<h3 id="aws-vpc">AWS VPC</h3>
+<p>Là một cơ sở hạ tầng điện toán đám mây được cung cấp bởi AWS. Trong bài lab, chúng ta chạy doạn code lắng nghe các sự kiện thay đổi từ RDS rồi đẩy vào Kinesis</p>
+<h4 id="aws-vpc">AWS VPC</h4>
+<p>Là dịch vụ cho phép khởi tạo các tài nguyên AWS trong một mảng ảo riêng cô lập và được kiểm soát hoàn toàn bởi người dùng.</p>
 <h4 id="aws-kinesis-data-stream">AWS Kinesis Data Stream</h4>
 <p><strong>AWS Kinesis</strong> là dịch vụ giúp các bạn xây dựng được một ứng dụng có khả năng phần tích và xử lý luồng dữ liệu (stream data) theo thời gian thực (realtime),<strong>AWS Kinesis</strong> có khả năng thu nhận, lưu trữ đến hàng terabytes data trong một giờ.</p>
 <p><strong>AWS Kinesis</strong> có thể nhận data từ nhiều nguồn khác nhau như logs, live stream từ các ứng dụng&hellip;</p>
@@ -627,16 +628,13 @@
 <p>Trong bài lab, chúng ta dùng đến <strong>Kinesis Data Stream</strong> để thu thập và xử lý data rồi đẩy về OpenSearch.</p>
 <h4 id="aws-opensearch">AWS OpenSearch</h4>
 <p><strong>AWS OpenSearch</strong> là một bộ công cụ tìm kiếm và phân tích phân tán, hướng tới cộng đồng, được cấp phép của Apache 2.0, 100% nguồn mở được sử dụng cho hàng loạt các trường hợp như giám sát ứng dụng theo thời gian thực, phân tích bản ghi và tìm kiếm trang web. OpenSearch cung cấp một hệ thống có quy mô linh hoạt để mang tới khả năng truy cập và phản hồi nhanh khối lượng lớn dữ liệu với công cụ trực quan hóa được tích hợp sẵn, OpenSearch Dashboards, giúp người dùng dễ dàng khám phá dữ liệu của họ. OpenSearch được hỗ trợ bởi thư viện tìm kiếm Apache Lucene và nó hỗ trợ hàng loạt các tính năng tìm kiếm và phân tích, chẳng hạn như tìm kiếm lân cận k gần nhất (KNN), SQL, Phát hiện bất thường, Thư viện Machine Learning Commons, Phân tích dấu vết, tìm kiếm toàn văn bản, v.v.</p>
-<p>Tiền thân của <strong>OpenSearch</strong> là <strong>Elasticsearch</strong>, nhưng mình không biết vì lý do gì <strong>AWS Elasticsearch</strong> lại đổi tên thành <strong>AWS OpenSearch</strong></p>
 <h4 id="nội-dung">Nội dung</h4>
 <ol>
-<li><a href="/2-prepare/2.1-createnewuser/">Tạo user quyền admin</a></li>
-<li><a href="2-prepare/2.2-createrepository/">Tạo repository</a></li>
-<li><a href="/2-prepare/2.3-createecr/">Tạo container registry</a></li>
-<li><a href="/2-prepare/2.4-createrds/">Tạo database</a></li>
-<li><a href="/2-prepare/2.5-createrole/">Tạo role</a></li>
-<li><a href="2-prepare/2.6-createekscluster/">Tạo EKS cluster</a></li>
-<li><a href="2-prepare/2.7-addnodegrouptocluster/">Thêm node group vào eks cluster</a></li>
+<li><a href="/vi/2-prepare/2.1-createvpc/">Tạo VPC</a></li>
+<li><a href="/vi/2-prepare/2.2-createrds/">Tạo RDS MySQL</a></li>
+<li><a href="/vi/2-prepare/2.3-createopensearch/">Tạo OpenSearch</a></li>
+<li><a href="/vi/2-prepare/2.4-createec2/">Tạo EC2</a></li>
+<li><a href="/vi/2-prepare/2.5-createkinesisdatastream/">Tạo Kinesis Data Stream</a></li>
 </ol>
 
 
@@ -898,19 +896,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1713172660"></script>
-    <script src="/js/perfect-scrollbar.min.js?1713172660"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1713172660"></script>
-    <script src="/js/jquery.sticky.js?1713172660"></script>
-    <script src="/js/featherlight.min.js?1713172660"></script>
-    <script src="/js/highlight.pack.js?1713172660"></script>
+    <script src="/js/clipboard.min.js?1713177169"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713177169"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713177169"></script>
+    <script src="/js/jquery.sticky.js?1713177169"></script>
+    <script src="/js/featherlight.min.js?1713177169"></script>
+    <script src="/js/highlight.pack.js?1713177169"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1713172660"></script>
-    <script src="/js/learn.js?1713172660"></script>
-    <script src="/js/hugo-learn.js?1713172660"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713177169"></script>
+    <script src="/js/learn.js?1713177169"></script>
+    <script src="/js/hugo-learn.js?1713177169"></script>
 
-    <link href="/mermaid/mermaid.css?1713172660" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1713172660"></script>
+    <link href="/mermaid/mermaid.css?1713177169" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713177169"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

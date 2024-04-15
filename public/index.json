@@ -56,7 +56,28 @@
 	"content": ""
 },
 {
+	"uri": "//localhost:1313/3-deployment/3.2-deploylambda/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/3-deployment/3.3-test/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "//localhost:1313/3-deployment/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/4-cleanup/",
 	"title": "",
 	"tags": [],
 	"description": "",
