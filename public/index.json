@@ -7,49 +7,35 @@
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/2-prepare/2.1-createnewuser/",
+	"uri": "//localhost:1313/2-prepare/2.1-createvpc/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/2-prepare/2.2-createrepository/",
+	"uri": "//localhost:1313/2-prepare/2.2-createrds/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/2-prepare/2.3-createecr/",
+	"uri": "//localhost:1313/2-prepare/2.3-createopensearch/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/2-prepare/2.4-createrds/",
+	"uri": "//localhost:1313/2-prepare/2.4-createec2/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/2-prepare/2.5-createrole/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/2-prepare/2.6-createekscluster/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/2-prepare/2.7-addnodegrouptocluster/",
+	"uri": "//localhost:1313/2-prepare/2.5-createkinesisdatastream/",
 	"title": "",
 	"tags": [],
 	"description": "",
@@ -63,35 +49,14 @@
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/3-pushcodetocodecommit/",
+	"uri": "//localhost:1313/3-deployment/3.1-deploycodeec2/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "//localhost:1313/4-createcodebuild/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/5-createcodepipeline/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/6-createeventbridgerule/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/7-configcodebuilddeployeks/",
+	"uri": "//localhost:1313/3-deployment/",
 	"title": "",
 	"tags": [],
 	"description": "",

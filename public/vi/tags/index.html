@@ -12,21 +12,21 @@
     <title>Tags :: Tự động build và deploy ứng dụng Java lên Amazon EKS</title>
 
     
-    <link href="/css/nucleus.css?1709825105" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709825105" rel="stylesheet">
-    <link href="/css/hybrid.css?1709825105" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709825105" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709825105" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709825105" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709825105" rel="stylesheet">
-    <link href="/css/theme.css?1709825105" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709825105" rel="stylesheet">
+    <link href="/css/nucleus.css?1713172660" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713172660" rel="stylesheet">
+    <link href="/css/hybrid.css?1713172660" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713172660" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713172660" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713172660" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713172660" rel="stylesheet">
+    <link href="/css/theme.css?1713172660" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713172660" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709825105" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713172660" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709825105"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713172660"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709825105"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709825105"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713172660"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713172660"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709825105"></script>
+<script type="text/javascript" src="/js/search.js?1713172660"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.1-createnewuser/" title="Tạo user với quyền admin" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.1-createvpc/" title="Tạo VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.1-createnewuser/">
-          <b> 2.1 </b>Tạo user với quyền admin
+      <a href="/vi/2-prepare/2.1-createvpc/">
+          <b> 2.1 </b>Tạo VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.2-createrepository/" title="Tạo repository" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.2-createrds/" title="Tạo RDS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.2-createrepository/">
-          <b> 2.2 </b>Tạo repository
+      <a href="/vi/2-prepare/2.2-createrds/">
+          <b> 2.2 </b>Tạo RDS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.3-createecr/" title="Tạo container registry" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.3-createopensearch/" title="Tạo OpenSearch service" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.3-createecr/">
-          <b> 2.3 </b>Tạo container registry
+      <a href="/vi/2-prepare/2.3-createopensearch/">
+          <b> 2.3 </b>Tạo OpenSearch service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.4-createrds/" title="Tạo database" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.4-createec2/" title="Tạo EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.4-createrds/">
-          <b> 2.4 </b>Tạo database
+      <a href="/vi/2-prepare/2.4-createec2/">
+          <b> 2.4 </b>Tạo EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,69 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.5-createrole/" title="Tạo role" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.5-createkinesisdatastream/" title="Tạo Kinesis Data Stream" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.5-createrole/">
-          <b> 2.5 </b>Tạo role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prepare/2.6-createekscluster/" title="Tạo EKS cluster" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prepare/2.6-createekscluster/">
-          <b> 2.6 </b>Tạo EKS cluster
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prepare/2.7-addnodegrouptocluster/" title="Thêm node group vào cluster" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prepare/2.7-addnodegrouptocluster/">
-          <b> 2.7 </b>Thêm node group vào cluster
+      <a href="/vi/2-prepare/2.5-createkinesisdatastream/">
+          <b> 2.5 </b>Tạo Kinesis Data Stream
           
             <i class="fas fa-check read-icon"></i>
           
@@ -342,18 +286,114 @@
  
   
     
-    <li data-nav-id="/vi/3-pushcodetocodecommit/" title="Đẩy source code lên CodeCommit" class="dd-item 
+    <li data-nav-id="/vi/3-deployment/" title="Triển khai" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-pushcodetocodecommit/">
-           <b> 3. </b> Đẩy source code lên CodeCommit
+      <a href="/vi/3-deployment/">
+          <b> 3. </b>Triển khai
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.1-deploycodeec2/" title="Triển khai Python code lắng nghe MySQL event" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.1-deploycodeec2/">
+          <b> 3.1 </b>Triển khai Python code lắng nghe MySQL event
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.2-deploylambda/" title="Triển khai Lambda" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.2-deploylambda/">
+          <b> 3.2 </b>Triển khai Lambda
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.3-test/" title="Kiểm thử" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.3-test/">
+          <b> 3.3 </b>Kiểm thử
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -368,91 +408,13 @@
  
   
     
-    <li data-nav-id="/vi/4-createcodebuild/" title="Tạo CodeBuild" class="dd-item 
+    <li data-nav-id="/vi/4-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-createcodebuild/">
-           <b> 4. </b> Tạo CodeBuild
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createcodepipeline/" title="Tạo CodePipeline" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createcodepipeline/">
-           <b> 5. </b> Tạo CodePipeline
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-createeventbridgerule/" title="Tạo EventBridge Rule cho merge PR" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-createeventbridgerule/">
-           <b> 6. </b> Tạo EventBridge Rule cho merge PR
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/7-configcodebuilddeployeks/" title="Thiết lập CodeBuild triển khai image lên EKS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/7-configcodebuilddeployeks/">
-          <b> 7. </b>Thiết lập CodeBuild triển khai image lên EKS
+      <a href="/vi/4-cleanup/">
+          <b> 4. </b>Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
@@ -601,7 +563,7 @@
             
           
           
-            <a href='/vi/'>Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS</a> > Tags
+            <a href='/vi/'>Đồng bộ dữ liệu từ RDS sang Opensearch</a> > Tags
           
         
           
@@ -789,19 +751,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -815,14 +764,10 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -871,19 +816,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -924,19 +856,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709825105"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709825105"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709825105"></script>
-    <script src="/js/jquery.sticky.js?1709825105"></script>
-    <script src="/js/featherlight.min.js?1709825105"></script>
-    <script src="/js/highlight.pack.js?1709825105"></script>
+    <script src="/js/clipboard.min.js?1713172660"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713172660"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713172660"></script>
+    <script src="/js/jquery.sticky.js?1713172660"></script>
+    <script src="/js/featherlight.min.js?1713172660"></script>
+    <script src="/js/highlight.pack.js?1713172660"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709825105"></script>
-    <script src="/js/learn.js?1709825105"></script>
-    <script src="/js/hugo-learn.js?1709825105"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713172660"></script>
+    <script src="/js/learn.js?1713172660"></script>
+    <script src="/js/hugo-learn.js?1713172660"></script>
 
-    <link href="/mermaid/mermaid.css?1709825105" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709825105"></script>
+    <link href="/mermaid/mermaid.css?1713172660" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713172660"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

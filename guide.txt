@@ -1,28 +1,23 @@
-- Draw diagram to understand flow
-- Create admin user group with AdministratorAccess policy
-- Create new user and attach new user to admin group
-- Login with new user and create repository in CodeCommit
-- Config ssh in local and push code from local to repository just created
-- Relog in with root account and create credentials for CodeCommit
-- Download zipped code, extract it in cloned repository from CodeCommit and push master
-- Checkout to new branch call dev, change little code and push to new branch
-- Write buildspec.yml and push to dev
-- create new project in codebuild and run manually to check
-- create new pipeline with build stage and skip deploy stage
-- create lambda function
-- add awsCodeBuildDeveloperAccess role and list,get pull request role to lambda permission
-- create rule target to lambda
-- write buildspec_docker.yml and push to dev branch
-- create pr to master from dev
-- merge pr and check trigger result
-NOTE: if ecr is public, role should attach AmazonElasticContainerRegistryPublicFullAccess, if not attach
-AmazonEC2ContainerRegistryFullAccess
-- edit buildspec_docker.yml to get commit sha is tag for docker image
-- create helm chart for deploying to k8s
-- update buildspec_docker to auto deploy to k8s
-- create role for k8s
-- create eks cluster and add node group
-- create pr to merge to master
-NOTE: if using not root account, you need to create iam access entries and grant cluster admin for user
-https://dev.to/aws-builders/deploy-your-application-on-kubernetes-amazon-eks-using-aws-serverless-codebuild-594i 
-- wait for result and check
+
+- Create VPC
+- Create SG for RDS
+- Create SG for EC2
+- Create parameters group for RDS and associcate with RDS going to initial
+- Create OpenSearch within VPC
+- Create EC2 with VPC
+- Create Kinesis
+- Deploy code listen event from RDS
+- Test event change from RDS
+- Deploy lambda function with VPC with Kinesis trigger
+- Test system
+
+Note:
+RDS:
+Change binlog_format value to 'ROW'
+Run below procedure after you connect to RDS MySQL with any SQL client you like. It will change the binlog duration to 24 hours. 
+call mysql.rds_set_configuration('binlog retention hours', 24)
+verification: show global variables like "log_bin";
+
+udpate iam role for ec2 with Kinesisfullaccess role
+
+before deploy lambda need building with dependencies

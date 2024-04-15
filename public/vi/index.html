@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS :: Tự động build và deploy ứng dụng Java lên Amazon EKS</title>
+    <title>Đồng bộ dữ liệu từ RDS sang Opensearch :: Tự động build và deploy ứng dụng Java lên Amazon EKS</title>
 
     
-    <link href="/css/nucleus.css?1709825830" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709825830" rel="stylesheet">
-    <link href="/css/hybrid.css?1709825830" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709825830" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709825830" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709825830" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709825830" rel="stylesheet">
-    <link href="/css/theme.css?1709825830" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709825830" rel="stylesheet">
+    <link href="/css/nucleus.css?1713166285" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713166285" rel="stylesheet">
+    <link href="/css/hybrid.css?1713166285" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713166285" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713166285" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713166285" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713166285" rel="stylesheet">
+    <link href="/css/theme.css?1713166285" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713166285" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709825830" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713166285" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709825830"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713166285"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709825830"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709825830"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713166285"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713166285"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709825830"></script>
+<script type="text/javascript" src="/js/search.js?1713166285"></script>
 
     
   </div>
@@ -94,6 +94,72 @@
           
       </a>
       
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/" title="Triển khai" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/">
+          <b> 3. </b>Triển khai
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.1-deploycodeec2/" title="Triển khai Python code lắng nghe MySQL event" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.1-deploycodeec2/">
+          <b> 3.1 </b>Triển khai Python code lắng nghe MySQL event
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -139,13 +205,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.1-createnewuser/" title="Tạo user với quyền admin" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.1-createvpc/" title="Tạo VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.1-createnewuser/">
-          <b> 2.1 </b>Tạo user với quyền admin
+      <a href="/vi/2-prepare/2.1-createvpc/">
+          <b> 2.1 </b>Tạo VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +233,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.2-createrepository/" title="Tạo repository" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.2-createrds/" title="Tạo RDS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.2-createrepository/">
-          <b> 2.2 </b>Tạo repository
+      <a href="/vi/2-prepare/2.2-createrds/">
+          <b> 2.2 </b>Tạo RDS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +261,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.3-createecr/" title="Tạo container registry" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.3-createopensearch/" title="Tạo OpenSearch service" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.3-createecr/">
-          <b> 2.3 </b>Tạo container registry
+      <a href="/vi/2-prepare/2.3-createopensearch/">
+          <b> 2.3 </b>Tạo OpenSearch service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +289,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.4-createrds/" title="Tạo database" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.4-createec2/" title="Tạo EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.4-createrds/">
-          <b> 2.4 </b>Tạo database
+      <a href="/vi/2-prepare/2.4-createec2/">
+          <b> 2.4 </b>Tạo EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,69 +317,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.5-createrole/" title="Tạo role" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.5-createkinesisdatastream/" title="Tạo Kinesis Data Stream" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.5-createrole/">
-          <b> 2.5 </b>Tạo role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prepare/2.6-createekscluster/" title="Tạo EKS cluster" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prepare/2.6-createekscluster/">
-          <b> 2.6 </b>Tạo EKS cluster
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prepare/2.7-addnodegrouptocluster/" title="Thêm node group vào cluster" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prepare/2.7-addnodegrouptocluster/">
-          <b> 2.7 </b>Thêm node group vào cluster
+      <a href="/vi/2-prepare/2.5-createkinesisdatastream/">
+          <b> 2.5 </b>Tạo Kinesis Data Stream
           
             <i class="fas fa-check read-icon"></i>
           
@@ -328,136 +338,6 @@
           
         
         </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-pushcodetocodecommit/" title="Đẩy source code lên CodeCommit" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-pushcodetocodecommit/">
-           <b> 3. </b> Đẩy source code lên CodeCommit
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-createcodebuild/" title="Tạo CodeBuild" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-createcodebuild/">
-           <b> 4. </b> Tạo CodeBuild
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createcodepipeline/" title="Tạo CodePipeline" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createcodepipeline/">
-           <b> 5. </b> Tạo CodePipeline
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-createeventbridgerule/" title="Tạo EventBridge Rule cho merge PR" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-createeventbridgerule/">
-           <b> 6. </b> Tạo EventBridge Rule cho merge PR
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/7-configcodebuilddeployeks/" title="Thiết lập CodeBuild triển khai image lên EKS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/7-configcodebuilddeployeks/">
-          <b> 7. </b>Thiết lập CodeBuild triển khai image lên EKS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
               
     </li>
   
@@ -592,13 +472,9 @@
 </span>
 
  
-<h1 id="xây-dựng-và-triển-khai-triển-tự-động-ứng-dụng-java-lên-amazon-eks">Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS</h1>
+<h1 id="đồng-bộ-dữ-liệu-từ-rds-sang-opensearch">Đồng bộ dữ liệu từ RDS sang OpenSearch</h1>
 <h4 id="tổng-quan">Tổng quan</h4>
-<p>Đây là workshop đầu tay của mình khi tham gia First Cloud Journey. Trong workshop này, chúng ta cùng đi tìm hiểu cách tạo pipeline CI/CD liên tục để build và triển khai ứng dựng Java cùng với các biện pháp bảo mật được khuyên dùng tới Amazion Elastic Kubernetes Service trên AWS Cloud. Đồng thời cũng tạo một endpoint để có thể truy cập vào ứng dụng Java bằng Elastic Load Balancing.</p>
-<h4 id="lưu-ý">Lưu ý</h4>
-<ul>
-<li>Workshop này mình cũng sử dụng kha khá các dịch vụ của AWS cho nên các bạn cần có kiến thức cơ bản về một số dịch vụ điển hình để có thể hiểu được.</li>
-</ul>
+<p>Khi các bạn làm việc với database, chắc hẳn các bạn cũng đã từng có suy nghĩ &ldquo;Làm thế nào ta có thể đồng bộ data sử sql sang nosql?&rdquo;. Thì trong bài lab này, các bạn sẽ tìm hiểu một trong những cách có thể đồng bộ dữ liệu từ sql sang nosql, mặc dù đây không phải là cách tối ưu hay đem lại hiệu năng tốt cho các dự án nhưng nó sẽ đem lại cho các bạn một cái nhìn tổng quan về phương pháp đồng bộ dữ liệu giữa hai lại database khác nhau. Để biết thêm các phương pháp khác các bạn thể search Google với từ khoá <code>Capture Data Change</code>.</p>
 	
   
         
@@ -677,6 +553,24 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
                         
             
             
@@ -756,102 +650,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -876,19 +674,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709825830"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709825830"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709825830"></script>
-    <script src="/js/jquery.sticky.js?1709825830"></script>
-    <script src="/js/featherlight.min.js?1709825830"></script>
-    <script src="/js/highlight.pack.js?1709825830"></script>
+    <script src="/js/clipboard.min.js?1713166285"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713166285"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713166285"></script>
+    <script src="/js/jquery.sticky.js?1713166285"></script>
+    <script src="/js/featherlight.min.js?1713166285"></script>
+    <script src="/js/highlight.pack.js?1713166285"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709825830"></script>
-    <script src="/js/learn.js?1709825830"></script>
-    <script src="/js/hugo-learn.js?1709825830"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713166285"></script>
+    <script src="/js/learn.js?1713166285"></script>
+    <script src="/js/hugo-learn.js?1713166285"></script>
 
-    <link href="/mermaid/mermaid.css?1709825830" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709825830"></script>
+    <link href="/mermaid/mermaid.css?1713166285" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713166285"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

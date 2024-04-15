@@ -12,21 +12,21 @@
     <title>Giới thiệu :: Tự động build và deploy ứng dụng Java lên Amazon EKS</title>
 
     
-    <link href="/css/nucleus.css?1709830311" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1709830311" rel="stylesheet">
-    <link href="/css/hybrid.css?1709830311" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1709830311" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1709830311" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709830311" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1709830311" rel="stylesheet">
-    <link href="/css/theme.css?1709830311" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1709830311" rel="stylesheet">
+    <link href="/css/nucleus.css?1713172660" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713172660" rel="stylesheet">
+    <link href="/css/hybrid.css?1713172660" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713172660" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713172660" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713172660" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713172660" rel="stylesheet">
+    <link href="/css/theme.css?1713172660" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713172660" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1709830311" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713172660" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1709830311"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713172660"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1709830311"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1709830311"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713172660"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713172660"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1709830311"></script>
+<script type="text/javascript" src="/js/search.js?1713172660"></script>
 
     
   </div>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.1-createnewuser/" title="Tạo user với quyền admin" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.1-createvpc/" title="Tạo VPC" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.1-createnewuser/">
-          <b> 2.1 </b>Tạo user với quyền admin
+      <a href="/vi/2-prepare/2.1-createvpc/">
+          <b> 2.1 </b>Tạo VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.2-createrepository/" title="Tạo repository" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.2-createrds/" title="Tạo RDS" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.2-createrepository/">
-          <b> 2.2 </b>Tạo repository
+      <a href="/vi/2-prepare/2.2-createrds/">
+          <b> 2.2 </b>Tạo RDS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.3-createecr/" title="Tạo container registry" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.3-createopensearch/" title="Tạo OpenSearch service" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.3-createecr/">
-          <b> 2.3 </b>Tạo container registry
+      <a href="/vi/2-prepare/2.3-createopensearch/">
+          <b> 2.3 </b>Tạo OpenSearch service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.4-createrds/" title="Tạo database" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.4-createec2/" title="Tạo EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.4-createrds/">
-          <b> 2.4 </b>Tạo database
+      <a href="/vi/2-prepare/2.4-createec2/">
+          <b> 2.4 </b>Tạo EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,69 +251,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prepare/2.5-createrole/" title="Tạo role" class="dd-item 
+    <li data-nav-id="/vi/2-prepare/2.5-createkinesisdatastream/" title="Tạo Kinesis Data Stream" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prepare/2.5-createrole/">
-          <b> 2.5 </b>Tạo role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prepare/2.6-createekscluster/" title="Tạo EKS cluster" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prepare/2.6-createekscluster/">
-          <b> 2.6 </b>Tạo EKS cluster
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prepare/2.7-addnodegrouptocluster/" title="Thêm node group vào cluster" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prepare/2.7-addnodegrouptocluster/">
-          <b> 2.7 </b>Thêm node group vào cluster
+      <a href="/vi/2-prepare/2.5-createkinesisdatastream/">
+          <b> 2.5 </b>Tạo Kinesis Data Stream
           
             <i class="fas fa-check read-icon"></i>
           
@@ -342,18 +286,114 @@
  
   
     
-    <li data-nav-id="/vi/3-pushcodetocodecommit/" title="Đẩy source code lên CodeCommit" class="dd-item 
+    <li data-nav-id="/vi/3-deployment/" title="Triển khai" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-pushcodetocodecommit/">
-           <b> 3. </b> Đẩy source code lên CodeCommit
+      <a href="/vi/3-deployment/">
+          <b> 3. </b>Triển khai
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.1-deploycodeec2/" title="Triển khai Python code lắng nghe MySQL event" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.1-deploycodeec2/">
+          <b> 3.1 </b>Triển khai Python code lắng nghe MySQL event
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.2-deploylambda/" title="Triển khai Lambda" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.2-deploylambda/">
+          <b> 3.2 </b>Triển khai Lambda
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-deployment/3.3-test/" title="Kiểm thử" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-deployment/3.3-test/">
+          <b> 3.3 </b>Kiểm thử
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -368,117 +408,13 @@
  
   
     
-    <li data-nav-id="/vi/4-createcodebuild/" title="Tạo CodeBuild" class="dd-item 
+    <li data-nav-id="/vi/4-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-createcodebuild/">
-           <b> 4. </b> Tạo CodeBuild
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-createcodepipeline/" title="Tạo CodePipeline" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-createcodepipeline/">
-           <b> 5. </b> Tạo CodePipeline
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-createeventbridgerule/" title="Tạo EventBridge Rule cho merge PR" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-createeventbridgerule/">
-           <b> 6. </b> Tạo EventBridge Rule cho merge PR
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/7-configcodebuilddeployeks/" title="Thiết lập CodeBuild triển khai image lên EKS" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/7-configcodebuilddeployeks/">
-          <b> 7. </b>Thiết lập CodeBuild triển khai image lên EKS
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/8-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/8-cleanup/">
-           <b> 8. </b> Dọn dẹp tài nguyên
+      <a href="/vi/4-cleanup/">
+          <b> 4. </b>Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
@@ -627,7 +563,7 @@
             
           
           
-            <a href='/vi/'>Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS</a> > Giới thiệu
+            <a href='/vi/'>Đồng bộ dữ liệu từ RDS sang Opensearch</a> > Giới thiệu
           
         
           
@@ -671,20 +607,19 @@
 
 
 	<h4 id="tổng-quan">Tổng quan</h4>
-<p>Các bạn có thể tham khảo pattern này để áp dụng cho dự án phát triển bằng Spring Framework hoặc có thể tuỳ chỉnh theo yêu cầu của dự án hay yêu cầu mà các bạn đề ra. Flow cơ bản của pattern như sau: đóng gói ứng dụng Java thành image, scan bảo mật image, tải image lên Amazon ECR và cuối cùng là triển khai image lên Amazon EKS. Pattern này cũng rất hữu ích khi muốn chuyển từ monolithic sang kiến trúc microservices lên EKS hoặc ECS, giúp giám sát và quản lý toàn bộ vòng đời của ứng dụng Java, bảo đảm mức độ tự động hoá cao hơn và tránh gặp lỗi. Để dễ dàng thì mình làm đơn giản nhất có thể, hoàn toàn bỏ qua các yếu tố về security.</p>
-<p>Ngoài ra, nếu các có thể tuỳ chỉnh theo ý mình để bài lab có thể hoàn thiện hơn.</p>
-<p>Dưới đây là flow
-<img alt="GitOps in AWS" src="../../images/devops-flow.png"></p>
+<p>Trong bài lab này, chúng ta sẽ thực hiện việc đồng bộ dữ liệu từ RDS tới Opensearch để có thể phục vụ tìm kiếm với kết quả được trả về nhanh nhất. Bài lab này chỉ là base cơ bản nhất, các bạn cũng có thể cải thiện hoặc tuỳ chỉnh nó theo các yêu cầu khác nhau để cho hợp lý nhất.</p>
+<p>Dưới đây là flow phương pháp
+<img alt="CDC Flow" src="../../images/cdc-flow.png"></p>
 <h4 id="nội-dung">Nội dung</h4>
 <ol>
 <li><a href="/vi/1-introduce/">Giới thiệu</a></li>
 <li><a href="/vi/2-prepare/">Các bước chuẩn bị</a></li>
-<li><a href="/vi/3-pushcodetocodecommit/">Đẩy code lên ComdeCommit</a></li>
-<li><a href="/vi/4-createcodebuild/">Tạo CodeBuild</a></li>
-<li><a href="/vi/5-createcodepipeline/">Tạo CodePipeline</a></li>
-<li><a href="/vi/6-createeventbridgerule/">Tạo EventBridge Rule cho merge PR</a></li>
-<li><a href="/vi/7-configcodebuilddeployeks/">Thiết lập CodeBuild triển khai image lên EKS Cluster</a></li>
-<li><a href="/vi/8-cleanup/">Dọn dẹp tài nguyên</a></li>
+<li><a href="/3-pushcodetocodecommit">Đẩy code lên ComdeCommit</a></li>
+<li><a href="/4-createcodebuild/">Tạo CodeBuild</a></li>
+<li><a href="/5-createcodepipeline/">Tạo CodePipeline</a></li>
+<li><a href="6-createeventbridgerule/">Tạo EventBridge Rule cho merge PR</a></li>
+<li><a href="7-configcodebuilddeployeks/">Thiết lập CodeBuild triển khai image lên EKS Cluster</a></li>
+<li><a href="8-cleanup/">Dọn dẹp tài nguyên</a></li>
 </ol>
 <p>Chúng ta cùng bắt tay làm nào. Let&rsquo;s go!!!!</p>
 
@@ -837,19 +772,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -863,30 +785,10 @@
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -935,19 +837,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -977,7 +866,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/" title="Xây dựng và triển khai triển tự động ứng dụng Java lên Amazon EKS"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/" title="Đồng bộ dữ liệu từ RDS sang Opensearch"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/2-prepare/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -990,19 +879,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1709830311"></script>
-    <script src="/js/perfect-scrollbar.min.js?1709830311"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1709830311"></script>
-    <script src="/js/jquery.sticky.js?1709830311"></script>
-    <script src="/js/featherlight.min.js?1709830311"></script>
-    <script src="/js/highlight.pack.js?1709830311"></script>
+    <script src="/js/clipboard.min.js?1713172660"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713172660"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713172660"></script>
+    <script src="/js/jquery.sticky.js?1713172660"></script>
+    <script src="/js/featherlight.min.js?1713172660"></script>
+    <script src="/js/highlight.pack.js?1713172660"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1709830311"></script>
-    <script src="/js/learn.js?1709830311"></script>
-    <script src="/js/hugo-learn.js?1709830311"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713172660"></script>
+    <script src="/js/learn.js?1713172660"></script>
+    <script src="/js/hugo-learn.js?1713172660"></script>
 
-    <link href="/mermaid/mermaid.css?1709830311" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1709830311"></script>
+    <link href="/mermaid/mermaid.css?1713172660" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713172660"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

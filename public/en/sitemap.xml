@@ -14,88 +14,64 @@
                 href="//localhost:1313/1-introduce/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prepare/2.1-createnewuser/</loc>
+    <loc>//localhost:1313/2-prepare/2.1-createvpc/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.1-createnewuser/"
+                href="//localhost:1313/vi/2-prepare/2.1-createvpc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prepare/2.1-createnewuser/"
+                href="//localhost:1313/2-prepare/2.1-createvpc/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prepare/2.2-createrepository/</loc>
+    <loc>//localhost:1313/2-prepare/2.2-createrds/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.2-createrepository/"
+                href="//localhost:1313/vi/2-prepare/2.2-createrds/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prepare/2.2-createrepository/"
+                href="//localhost:1313/2-prepare/2.2-createrds/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prepare/2.3-createecr/</loc>
+    <loc>//localhost:1313/2-prepare/2.3-createopensearch/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.3-createecr/"
+                href="//localhost:1313/vi/2-prepare/2.3-createopensearch/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prepare/2.3-createecr/"
+                href="//localhost:1313/2-prepare/2.3-createopensearch/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prepare/2.4-createrds/</loc>
+    <loc>//localhost:1313/2-prepare/2.4-createec2/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.4-createrds/"
+                href="//localhost:1313/vi/2-prepare/2.4-createec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prepare/2.4-createrds/"
+                href="//localhost:1313/2-prepare/2.4-createec2/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-prepare/2.5-createrole/</loc>
+    <loc>//localhost:1313/2-prepare/2.5-createkinesisdatastream/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.5-createrole/"
+                href="//localhost:1313/vi/2-prepare/2.5-createkinesisdatastream/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prepare/2.5-createrole/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-prepare/2.6-createekscluster/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.6-createekscluster/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-prepare/2.6-createekscluster/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-prepare/2.7-addnodegrouptocluster/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/2.7-addnodegrouptocluster/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-prepare/2.7-addnodegrouptocluster/"
+                href="//localhost:1313/2-prepare/2.5-createkinesisdatastream/"
                 />
   </url><url>
     <loc>//localhost:1313/2-prepare/</loc>
@@ -110,64 +86,28 @@
                 href="//localhost:1313/2-prepare/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-pushcodetocodecommit/</loc>
+    <loc>//localhost:1313/3-deployment/3.1-deploycodeec2/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-pushcodetocodecommit/"
+                href="//localhost:1313/vi/3-deployment/3.1-deploycodeec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-pushcodetocodecommit/"
+                href="//localhost:1313/3-deployment/3.1-deploycodeec2/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-createcodebuild/</loc>
+    <loc>//localhost:1313/3-deployment/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-createcodebuild/"
+                href="//localhost:1313/vi/3-deployment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-createcodebuild/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-createcodepipeline/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createcodepipeline/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createcodepipeline/"
-                />
-  </url><url>
-    <loc>//localhost:1313/6-createeventbridgerule/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-createeventbridgerule/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-createeventbridgerule/"
-                />
-  </url><url>
-    <loc>//localhost:1313/7-configcodebuilddeployeks/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-configcodebuilddeployeks/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-configcodebuilddeployeks/"
+                href="//localhost:1313/3-deployment/"
                 />
   </url><url>
     <loc>//localhost:1313/</loc>

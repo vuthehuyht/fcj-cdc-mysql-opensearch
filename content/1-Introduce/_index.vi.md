@@ -8,12 +8,10 @@ pre : " <b> 1. </b> "
 
 #### Tổng quan
 
-Các bạn có thể tham khảo pattern này để áp dụng cho dự án phát triển bằng Spring Framework hoặc có thể tuỳ chỉnh theo yêu cầu của dự án hay yêu cầu mà các bạn đề ra. Flow cơ bản của pattern như sau: đóng gói ứng dụng Java thành image, scan bảo mật image, tải image lên Amazon ECR và cuối cùng là triển khai image lên Amazon EKS. Pattern này cũng rất hữu ích khi muốn chuyển từ monolithic sang kiến trúc microservices lên EKS hoặc ECS, giúp giám sát và quản lý toàn bộ vòng đời của ứng dụng Java, bảo đảm mức độ tự động hoá cao hơn và tránh gặp lỗi. Để dễ dàng thì mình làm đơn giản nhất có thể, hoàn toàn bỏ qua các yếu tố về security.
+Trong bài lab này, chúng ta sẽ thực hiện việc đồng bộ dữ liệu từ RDS tới Opensearch để có thể phục vụ tìm kiếm với kết quả được trả về nhanh nhất. Bài lab này chỉ là base cơ bản nhất, các bạn cũng có thể cải thiện hoặc tuỳ chỉnh nó theo các yêu cầu khác nhau để cho hợp lý nhất.
 
-Ngoài ra, nếu các có thể tuỳ chỉnh theo ý mình để bài lab có thể hoàn thiện hơn.
-
-Dưới đây là flow
-![GitOps in AWS](../../images/devops-flow.png)
+Dưới đây là flow phương pháp
+![CDC Flow](../../images/cdc-flow.png)
 
 #### Nội dung
 
