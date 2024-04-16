@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Triển khai Python code lắng nghe MySQL event on Tự động build và deploy ứng dụng Java lên Amazon EKS</title>
+    <link>//localhost:1313/vi/3-deployment/3.1-deploycodeec2/</link>
+    <description>Recent content in Triển khai Python code lắng nghe MySQL event on Tự động build và deploy ứng dụng Java lên Amazon EKS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="//localhost:1313/vi/3-deployment/3.1-deploycodeec2/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
