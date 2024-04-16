@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/1-introduce/</loc>
+    <loc>//localhost:1313/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-introduce/"
+                href="//localhost:1313/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-introduce/"
+                href="//localhost:1313/"
                 />
   </url><url>
     <loc>//localhost:1313/2-prepare/2.1-createvpc/</loc>
@@ -26,6 +26,18 @@
                 href="//localhost:1313/2-prepare/2.1-createvpc/"
                 />
   </url><url>
+    <loc>//localhost:1313/1-introduce/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-introduce/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-introduce/"
+                />
+  </url><url>
     <loc>//localhost:1313/2-prepare/2.2-createrds/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,6 +48,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/2-prepare/2.2-createrds/"
+                />
+  </url><url>
+    <loc>//localhost:1313/2-prepare/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-prepare/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-prepare/"
                 />
   </url><url>
     <loc>//localhost:1313/2-prepare/2.3-createopensearch/</loc>
@@ -72,18 +96,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/2-prepare/2.5-createkinesisdatastream/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-prepare/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-prepare/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-prepare/"
                 />
   </url><url>
     <loc>//localhost:1313/3-deployment/3.1-deploycodeec2/</loc>
@@ -144,18 +156,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/4-cleanup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/</loc>

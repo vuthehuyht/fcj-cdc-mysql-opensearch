@@ -1,48 +1,55 @@
 [
 {
-	"uri": "//localhost:1313/1-introduce/",
-	"title": "",
+	"uri": "//localhost:1313/",
+	"title": "Capture Data Change from RDS to AWS OpenSearch",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Capture Data Change from RDS to AWS OpenSearch Overview When you work with database, surely you have also thought \u0026ldquo;How can we get collect changes in data to serve some purpose such as searching, analyzing, v.v..?\u0026rdquo;. So in this lab, you will discover how to collect change data from RDS for MySQL to OpenSearch. Although, this is not an optimal way or bring good performance to projects, but it will bring you an overview of collection methods between different database type and database management systems. To learn more, you can search in Google with Capture Data Change keyword.\n"
 },
 {
 	"uri": "//localhost:1313/2-prepare/2.1-createvpc/",
-	"title": "",
+	"title": "Creating VPC",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "On the search bar, search and choose VPC Click Create VPC On name, enter cdc or any name you want\nOn IPv4 CIDR block, enter 10.0.0.0/16 Other sections are left as default, on VPC Endpoint choose None\nClick Create VPC "
+},
+{
+	"uri": "//localhost:1313/1-introduce/",
+	"title": "Introduce",
+	"tags": [],
+	"description": "",
+	"content": "Overview In this lab, we will perform collecting change in data from RDS for MySQL to OpenSearch to be able to serve different requirements. This lab is just the most base, you can also improve or customize it according to different requirements to make it mosit suitable.\nThe following method flow We create, update or delete record with RDS for MySQL EC2 run code that listen for record creation, update or deletion event and push the content of event into Kinesis The data stream added to Kinesis also called as Lambda trigger with event content input add Kinesis Lambda push that content into OpenSearch and return the URL access the content Content Introduce Prepare Deployment Cleanup Let\u0026rsquo;s go!!!!\n"
 },
 {
 	"uri": "//localhost:1313/2-prepare/2.2-createrds/",
-	"title": "",
+	"title": "Creating RDS",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/2-prepare/2.3-createopensearch/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/2-prepare/2.4-createec2/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/2-prepare/2.5-createkinesisdatastream/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": " Creating Security Group for RDS Tại ô tìm kiếm, tìm và chọn \u0026ldquo;Security Groups\u0026rdquo; On the search bar, search and choose \u0026ldquo;Security Groups\u0026rdquo; On navigation interface, choose Create security group On Security group name section, enter cdc-mysql-sg On VPC, choose vpc-cdc On Inbound rules item, choose Add rule and enter informations:\nType: MySQL/Aurora Source: 0.0.0.0 Cuối cùng, chọn Create security group để tạo SG. Lastly, click Create security group to create.\nCreating Parameter Group for RDS MySQL At left navigation bar of the RDS interface, choose Parameter groups -\u0026gt; Create parameter group At Parameter group family, choose mysql8.0 At Group Name, enter cdc-group Choose Create Creating RDS for MySQL Navigate to database creation page\nOn navigation bar, search and choose RDS At RDS interface\nChoose Create database Database configuration\nChoose a database creation method: choose Standard create Engine options: choose MySQL Templates: choose Free Tier DB instance identifier: enter cdc-database Master password: enter Huyvt2609 Confirm master password: enter Huyvt2609 DB instance class: choose db.t2.micro Public access: choose Yes VPC security group (firewall): choose cdc-rds-sg At Additional configuration item DB parameter group: choose cdc-group Encryption: untick Enable encryption Maintenance: untick Enable auto minor version upgrade Other items are left as default Note: The database creation process will take quite a long time, about 10 minutes.\nAfter creation done, we need to verify MySQL bin log is enabled\nConnecting to RDS by terminal: mysql -h rds_enpoint -u admin -p, then enter password Enter show global variables like \u0026quot;log_bin, if the result get log_bin ON, it will be OK "
 },
 {
 	"uri": "//localhost:1313/2-prepare/",
+	"title": "Preparation",
+	"tags": [],
+	"description": "",
+	"content": "Before getting started to deploy this method, let\u0026rsquo;s take a look some of the services used in the lab.\nAWS RDS AWS RDS is the one of typical services of AWS, used very much and popular. In the lab, RDS will be the beginning point.\nAWS Lambda AWS Lambda là một dịch vụ điện toán phi máy chủ, theo định hướng sự kiện (hiểu nôm na là khi nào có request đến thì nó mới chạy), giúp cho chúng ta chạy code hầu hết mọi loại application hoặc backend service mà không cần cung cấp hay quản lý máy chủ. AWS Lambda có thể được kích hoạt từ hơn 200 dịch vụ của AWS và các application dưới dạng SaaS và chúng ta chỉ cần trả phí theo mức sử dụng. AWS Lambda is a serverless computing service, an event-driven (it means when request coming, service works), help us run code for almost any type of application or backend service without needing to provision or manage server. AWS Lambda can be enabled from more than 200+ AWS services and application as SaaS and we only need to pay as we use.\nAWS EC2 EC2 is cloud computing insfrastructure provided by AWS. In this lab, we build EC2 to run Python code that listen data change events from RDS then push them to Kinesis.\nAWS VPC VPC is a service that allows AWS resources to be created in an isolated virtual network and completely control by user.\nAWS Kinesis Data Stream AWS Kinesis là dịch vụ giúp các bạn xây dựng được một ứng dụng có khả năng phần tích và xử lý luồng dữ liệu (stream data) theo thời gian thực (realtime),AWS Kinesis có khả năng thu nhận, lưu trữ đến hàng terabytes data trong một giờ.\nAWS Kinesis có thể nhận data từ nhiều nguồn khác nhau như logs, live stream từ các ứng dụng\u0026hellip;\nHiện tại, AWS Kinesis gồm 4 components như sau:\nKinesis Data Streams: thu thập, xử lý và lưu trữ data stream Kinesis Data Firehorse: load data stream vào AWS data store (ví dụ: S3) Kinesis Data Analytics: phân tích data stream với SQL hoặc Apache Flink Kinesis Video Stream: thu thập, xử lý và lưu trữ video stream Trong bài lab, chúng ta dùng đến Kinesis Data Stream để thu thập và xử lý data rồi đẩy về OpenSearch.\nAWS Kinesis is a service that helps you to build an application capable of analyzing and processin data in real time, capable of receiving and storing up to terrabytes of data in an hour, capable of collecting data from different sources like logs, live stream\u0026hellip;\nNow, AWS Kinesis consists of 4 components:\nKinesis Data Streams: collecting, processing and storing data stream Kinesis Data Firehorse: loading data stream into AWS data store Kinesis Data Analytics: analyzing data stream with SQL or Apache Flink Kinesis Video Stream: collecting, processing and storing data stream In this lab, we use Kinesis Data Stream to collect and process data then push them to OpenSearch.\nAWS OpenSearch AWS OpenSearch is a distributed, community-driven, Apache 2.0-licensed, 100% open source suite of distributed search and analytics tools used for a variety of use cases such as real-time application monitoring, logs and site search. OpenSearch provides a scalable system for quickly accessing and responding to large volumes of data with built-in visualization tools, OpenSearch Dashboards, that help users easily explore data their. OpenSearch is powered by the Apache Lucene search library and it supports a wide range of search and analysis features, such as k-nearest neighbor (KNN) search, SQL, Anomaly Detection, Machine Libraries Learning Commons, Trace analysis, full-text search, and more.\nContent Creating VPC Creating RDS for MySQL Creating OpenSearch Creating EC2 Creating Kinesis Data Stream "
+},
+{
+	"uri": "//localhost:1313/2-prepare/2.3-createopensearch/",
+	"title": "Creating OpenSearch service",
+	"tags": [],
+	"description": "",
+	"content": "In the search box, search and choose Amazon OpenSearch Service At interface, choose Create domain At Domain name, enter cdc-opensearch\nAt Domain creation method, choose Standard create At Templates, choose Dev/Test\nAt Deployment options, choose Domain without standby At Availability Zone(s), choose 1-AZ\nAt Engine options, choose version 6.8 Instance family: choose General purpose\nInstance type: choose t3.small.search\nNumber of nodes: enter 1 Network, choose Public access\nIP address type: choose Dual-stack mode\nFine-grained access control, tick Enable fine-grained access control\nMaster user, choose Create master user\nMaster username, enter admin\nMaster password and Confirm master password, choose Huyvt2609@ Access policy, choose Only use fine-grained access control Lưu ý: Quá trình tạo service sẽ diễn ra khá lâu, khoảng 15 phút. Note: The service creation process will take quite long time, about 15 minutes.\n"
+},
+{
+	"uri": "//localhost:1313/2-prepare/2.4-createec2/",
+	"title": "Create EC2",
+	"tags": [],
+	"description": "",
+	"content": " Creating Security Group for EC2 On the search box, search and choose \u0026ldquo;Security Groups\u0026rdquo; At the navigation interface, choose Create security group At Security group name, enter cdc-server-sg At VPC, choose vpc-cdc At Inbound rules, choose Add rule và enter information:\nType: SSH Source: 0.0.0.0/0 Creating EC2 On the left navigation bar, choose Instance -\u0026gt; Lanch Instances Name, Enter cdc-listener OS, choose Ubuntu Tạo mới Key pair với name cdc-kp Create new key pair with name cdc-kp At Networking settings, choose Edit Select the created information as shown in the image Last, click Lanch instance\n"
+},
+{
+	"uri": "//localhost:1313/2-prepare/2.5-createkinesisdatastream/",
 	"title": "",
 	"tags": [],
 	"description": "",
@@ -78,13 +85,6 @@
 },
 {
 	"uri": "//localhost:1313/4-cleanup/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "//localhost:1313/",
 	"title": "",
 	"tags": [],
 	"description": "",

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: Automatically build and deploy Java application to Amazon EKS</title>
+    <title>Preparation :: Automatically build and deploy Java application to Amazon EKS</title>
 
     
-    <link href="/css/nucleus.css?1713177169" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1713177169" rel="stylesheet">
-    <link href="/css/hybrid.css?1713177169" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1713177169" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1713177169" rel="stylesheet">
-    <link href="/css/auto-complete.css?1713177169" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1713177169" rel="stylesheet">
-    <link href="/css/theme.css?1713177169" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1713177169" rel="stylesheet">
+    <link href="/css/nucleus.css?1713288811" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713288811" rel="stylesheet">
+    <link href="/css/hybrid.css?1713288811" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713288811" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713288811" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713288811" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713288811" rel="stylesheet">
+    <link href="/css/theme.css?1713288811" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713288811" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1713177169" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713288811" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1713177169"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713288811"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1713177169"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1713177169"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713288811"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713288811"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1713177169"></script>
+<script type="text/javascript" src="/js/search.js?1713288811"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduce" class="dd-item 
         
         
         
         ">
       <a href="/1-introduce/">
-          
+           <b> 1. </b> Introduce
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/" title="Preparation" class="dd-item 
         
         active
         
         ">
       <a href="/2-prepare/">
-          
+          <b> 2. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.1-createvpc/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.1-createvpc/" title="Creating VPC" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.1-createvpc/">
-          
+          <b> 2.1 </b>Creating VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.2-createrds/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.2-createrds/" title="Creating RDS" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.2-createrds/">
-          
+          <b> 2.2 </b>Creating RDS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.3-createopensearch/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.3-createopensearch/" title="Creating OpenSearch service" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.3-createopensearch/">
-          
+          <b> 2.3 </b>Creating OpenSearch service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.4-createec2/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.4-createec2/" title="Create EC2" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.4-createec2/">
-          
+          <b> 2.4 </b>Create EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -563,7 +563,7 @@
             
           
           
-            <a href='/'></a> > 
+            <a href='/'>Capture Data Change from RDS to AWS OpenSearch</a> > Preparation
           
         
           
@@ -574,7 +574,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -590,7 +598,7 @@
           
             <h1>
               
-              
+              Preparation
             </h1>
           
 
@@ -598,7 +606,47 @@
 
 
 
-	
+	<p>Before getting started to deploy this method, let&rsquo;s take a look some of the services used in the lab.</p>
+<h4 id="aws-rds">AWS RDS</h4>
+<p><strong>AWS RDS</strong> is the one of typical services of AWS, used very much and popular. In the lab, RDS will be the beginning point.</p>
+<h4 id="aws-lambda">AWS Lambda</h4>
+<p><strong>AWS Lambda</strong> là một dịch vụ điện toán phi máy chủ, theo định hướng sự kiện (hiểu nôm na là khi nào có request đến thì nó mới chạy), giúp cho chúng ta chạy code hầu hết mọi loại application hoặc backend service mà không cần cung cấp hay quản lý máy chủ. <strong>AWS Lambda</strong> có thể được kích hoạt từ hơn 200 dịch vụ của AWS và các application dưới dạng SaaS và chúng ta chỉ cần trả phí theo mức sử dụng.
+<strong>AWS Lambda</strong> is a serverless computing service, an event-driven (it means when request coming, service works), help us run code for almost any type of application or backend service without needing to provision or manage server. <strong>AWS Lambda</strong> can be enabled from more than 200+ AWS services and application as SaaS and we only need to pay as we use.</p>
+<h4 id="aws-ec2">AWS EC2</h4>
+<p>EC2 is cloud computing insfrastructure provided by AWS. In this lab, we build EC2 to run Python code that listen data change events from RDS then push them to Kinesis.</p>
+<h4 id="aws-vpc">AWS VPC</h4>
+<p>VPC is a service that allows AWS resources to be created in an isolated virtual network and completely control by user.</p>
+<h4 id="aws-kinesis-data-stream">AWS Kinesis Data Stream</h4>
+<p><strong>AWS Kinesis</strong> là dịch vụ giúp các bạn xây dựng được một ứng dụng có khả năng phần tích và xử lý luồng dữ liệu (stream data) theo thời gian thực (realtime),<strong>AWS Kinesis</strong> có khả năng thu nhận, lưu trữ đến hàng terabytes data trong một giờ.</p>
+<p><strong>AWS Kinesis</strong> có thể nhận data từ nhiều nguồn khác nhau như logs, live stream từ các ứng dụng&hellip;</p>
+<p>Hiện tại, <strong>AWS Kinesis</strong> gồm 4 components như sau:</p>
+<ul>
+<li><strong>Kinesis Data Streams</strong>: thu thập, xử lý và lưu trữ data stream</li>
+<li><strong>Kinesis Data Firehorse</strong>: load data stream vào AWS data store (ví dụ: S3)</li>
+<li><strong>Kinesis Data Analytics</strong>: phân tích data stream với SQL hoặc Apache Flink</li>
+<li><strong>Kinesis Video Stream</strong>: thu thập, xử lý và lưu trữ video stream</li>
+</ul>
+<p>Trong bài lab, chúng ta dùng đến <strong>Kinesis Data Stream</strong> để thu thập và xử lý data rồi đẩy về OpenSearch.</p>
+<p>AWS Kinesis is a service that helps you to build an application capable of analyzing and processin data in real time, capable of receiving and storing up to terrabytes of data in an hour, capable of collecting data from different sources like logs, live stream&hellip;</p>
+<p>Now, AWS Kinesis consists of 4 components:</p>
+<ul>
+<li><strong>Kinesis Data Streams</strong>: collecting, processing and storing data stream</li>
+<li><strong>Kinesis Data Firehorse</strong>: loading data stream into AWS data store</li>
+<li><strong>Kinesis Data Analytics</strong>: analyzing data stream with SQL or Apache Flink</li>
+<li><strong>Kinesis Video Stream</strong>: collecting, processing and storing data stream</li>
+</ul>
+<p>In this lab, we use <strong>Kinesis Data Stream</strong> to collect and process data then push them to OpenSearch.</p>
+<h4 id="aws-opensearch">AWS OpenSearch</h4>
+<p><strong>AWS OpenSearch</strong> is a distributed, community-driven, Apache 2.0-licensed, 100% open source suite of distributed search and analytics tools used for a variety of use cases such as real-time application monitoring, logs and site search. OpenSearch provides a scalable system for quickly accessing and responding to large volumes of data with built-in visualization tools, OpenSearch Dashboards, that help users easily explore data their. OpenSearch is powered by the Apache Lucene search library and it supports a wide range of search and analysis features, such as k-nearest neighbor (KNN) search, SQL, Anomaly Detection, Machine Libraries Learning Commons, Trace analysis, full-text search, and more.</p>
+<h4 id="content">Content</h4>
+<ol>
+<li><a href="/2-prepare/2.1-createvpc/">Creating VPC</a></li>
+<li><a href="/2-prepare/2.2-createrds/">Creating RDS for MySQL</a></li>
+<li><a href="/2-prepare/2.3-createopensearch/">Creating OpenSearch</a></li>
+<li><a href="/2-prepare/2.4-createec2/">Creating EC2</a></li>
+<li><a href="/2-prepare/2.5-createkinesisdatastream/">Creating Kinesis Data Stream</a></li>
+</ol>
+
 
 
 
@@ -845,10 +893,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-introduce/" title=""> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-introduce/" title="Introduce"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prepare/2.1-createvpc/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-prepare/2.1-createvpc/" title="Creating VPC" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -858,19 +906,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1713177169"></script>
-    <script src="/js/perfect-scrollbar.min.js?1713177169"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1713177169"></script>
-    <script src="/js/jquery.sticky.js?1713177169"></script>
-    <script src="/js/featherlight.min.js?1713177169"></script>
-    <script src="/js/highlight.pack.js?1713177169"></script>
+    <script src="/js/clipboard.min.js?1713288811"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713288811"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713288811"></script>
+    <script src="/js/jquery.sticky.js?1713288811"></script>
+    <script src="/js/featherlight.min.js?1713288811"></script>
+    <script src="/js/highlight.pack.js?1713288811"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1713177169"></script>
-    <script src="/js/learn.js?1713177169"></script>
-    <script src="/js/hugo-learn.js?1713177169"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713288811"></script>
+    <script src="/js/learn.js?1713288811"></script>
+    <script src="/js/hugo-learn.js?1713288811"></script>
 
-    <link href="/mermaid/mermaid.css?1713177169" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1713177169"></script>
+    <link href="/mermaid/mermaid.css?1713288811" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713288811"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

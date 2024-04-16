@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: Automatically build and deploy Java application to Amazon EKS</title>
+    <title>Capture Data Change from RDS to AWS OpenSearch :: Automatically build and deploy Java application to Amazon EKS</title>
 
     
-    <link href="/css/nucleus.css?1713177169" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1713177169" rel="stylesheet">
-    <link href="/css/hybrid.css?1713177169" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1713177169" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1713177169" rel="stylesheet">
-    <link href="/css/auto-complete.css?1713177169" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1713177169" rel="stylesheet">
-    <link href="/css/theme.css?1713177169" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1713177169" rel="stylesheet">
+    <link href="/css/nucleus.css?1713288858" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713288858" rel="stylesheet">
+    <link href="/css/hybrid.css?1713288858" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713288858" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713288858" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713288858" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713288858" rel="stylesheet">
+    <link href="/css/theme.css?1713288858" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713288858" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1713177169" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713288858" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1713177169"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713288858"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1713177169"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1713177169"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713288858"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713288858"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1713177169"></script>
+<script type="text/javascript" src="/js/search.js?1713288858"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduce" class="dd-item 
         
         
         
         ">
       <a href="/1-introduce/">
-          
+           <b> 1. </b> Introduce
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/" title="Preparation" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/">
-          
+          <b> 2. </b>Preparation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.1-createvpc/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.1-createvpc/" title="Creating VPC" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.1-createvpc/">
-          
+          <b> 2.1 </b>Creating VPC
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.2-createrds/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.2-createrds/" title="Creating RDS" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.2-createrds/">
-          
+          <b> 2.2 </b>Creating RDS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.3-createopensearch/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.3-createopensearch/" title="Creating OpenSearch service" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.3-createopensearch/">
-          
+          <b> 2.3 </b>Creating OpenSearch service
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/2-prepare/2.4-createec2/" title="" class="dd-item 
+    <li data-nav-id="/2-prepare/2.4-createec2/" title="Create EC2" class="dd-item 
         
         
         
         ">
       <a href="/2-prepare/2.4-createec2/">
-          
+          <b> 2.4 </b>Create EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -553,17 +553,10 @@
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
-           
-	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
+ 
+<h1 id="capture-data-change-from-rds-to-aws-opensearch">Capture Data Change from RDS to AWS OpenSearch</h1>
+<h4 id="overview">Overview</h4>
+<p>When you work with database, surely you have also thought &ldquo;How can we get collect changes in data to serve some purpose such as searching, analyzing, v.v..?&rdquo;. So in this lab, you will discover how to collect change data from RDS for MySQL to OpenSearch. Although, this is not an optimal way or bring good performance to projects, but it will bring you an overview of collection methods between different database type and database management systems. To learn more, you can search in Google with <code>Capture Data Change</code> keyword.</p>
 	
   
         
@@ -801,7 +794,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/1-introduce/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduce/" title="Introduce" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -811,19 +804,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1713177169"></script>
-    <script src="/js/perfect-scrollbar.min.js?1713177169"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1713177169"></script>
-    <script src="/js/jquery.sticky.js?1713177169"></script>
-    <script src="/js/featherlight.min.js?1713177169"></script>
-    <script src="/js/highlight.pack.js?1713177169"></script>
+    <script src="/js/clipboard.min.js?1713288858"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713288858"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713288858"></script>
+    <script src="/js/jquery.sticky.js?1713288858"></script>
+    <script src="/js/featherlight.min.js?1713288858"></script>
+    <script src="/js/highlight.pack.js?1713288858"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1713177169"></script>
-    <script src="/js/learn.js?1713177169"></script>
-    <script src="/js/hugo-learn.js?1713177169"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713288858"></script>
+    <script src="/js/learn.js?1713288858"></script>
+    <script src="/js/hugo-learn.js?1713288858"></script>
 
-    <link href="/mermaid/mermaid.css?1713177169" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1713177169"></script>
+    <link href="/mermaid/mermaid.css?1713288858" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713288858"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

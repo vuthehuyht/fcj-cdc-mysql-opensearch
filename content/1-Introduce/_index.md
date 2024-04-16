@@ -25,4 +25,4 @@ The following method flow
 3. [Deployment](/3-deployment)
 4. [Cleanup](/4-cleanup/)
 
-Chúng ta cùng bắt tay làm nào. Let's go!!!!
+Let's go!!!!
