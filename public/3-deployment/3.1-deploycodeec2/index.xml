@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Automatically build and deploy Java application to Amazon EKS</title>
+    <title>Capture Data Change from RDS to AWS OpenSearch</title>
     <link>//localhost:1313/3-deployment/3.1-deploycodeec2/</link>
-    <description>Recent content on Automatically build and deploy Java application to Amazon EKS</description>
+    <description>Recent content on Capture Data Change from RDS to AWS OpenSearch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/3-deployment/3.1-deploycodeec2/index.xml" rel="self" type="application/rss+xml" />

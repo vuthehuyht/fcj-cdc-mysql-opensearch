@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Automatically build and deploy Java application to Amazon EKS"
+title = "Capture Data Change from RDS to AWS OpenSearch"
 weight = 1
 languageName = "English"
 
