@@ -25,4 +25,4 @@ Dưới đây là flow phương pháp
 3. [Triển khai](/3-deployment)
 4. [Dọn dẹp tài nguyên](/4-cleanup/)
 
-Chúng ta cùng bắt tay làm nào. Let's go!!!!
+Let's go!!!!
