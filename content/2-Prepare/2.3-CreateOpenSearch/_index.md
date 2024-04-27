@@ -39,5 +39,4 @@ At interface, choose **Create domain**
 **Access policy**, choose **Only use fine-grained access control**
 ![os](../../../images/os-8.png)
 
-**Lưu ý**: Quá trình tạo service sẽ diễn ra khá lâu, khoảng 15 phút.
 **Note**: The service creation process will take quite long time, about 15 minutes.

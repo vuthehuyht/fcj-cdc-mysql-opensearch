@@ -35,7 +35,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Tự động build và deploy ứng dụng Java lên Amazon EKS"
+title = "Thu thập dữ liệu thay đổi từ RDS tới OpenSearch"
 weight = 2
 languageName = "Tiếng Việt"
 
