@@ -1,9 +1,9 @@
 ---
 title : "Preparation"
 date :  "`r Sys.Date()`" 
-weight: 2
+weight: 5
 chapter: false
-pre: "<b> 2. </b>"
+pre: "<b> 2.5 </b>"
 ---
 
 Before getting started to deploy this method, let's take a look some of the services used in the lab.
@@ -22,18 +22,6 @@ EC2 is cloud computing insfrastructure provided by AWS. In this lab, we build EC
 VPC is a service that allows AWS resources to be created in an isolated virtual network and completely control by user.
 
 #### AWS Kinesis Data Stream
-**AWS Kinesis** là dịch vụ giúp các bạn xây dựng được một ứng dụng có khả năng phần tích và xử lý luồng dữ liệu (stream data) theo thời gian thực (realtime),**AWS Kinesis** có khả năng thu nhận, lưu trữ đến hàng terabytes data trong một giờ.
-
-**AWS Kinesis** có thể nhận data từ nhiều nguồn khác nhau như logs, live stream từ các ứng dụng...
-
-Hiện tại, **AWS Kinesis** gồm 4 components như sau:
-- **Kinesis Data Streams**: thu thập, xử lý và lưu trữ data stream
-- **Kinesis Data Firehorse**: load data stream vào AWS data store (ví dụ: S3)
-- **Kinesis Data Analytics**: phân tích data stream với SQL hoặc Apache Flink
-- **Kinesis Video Stream**: thu thập, xử lý và lưu trữ video stream
-
-Trong bài lab, chúng ta dùng đến **Kinesis Data Stream** để thu thập và xử lý data rồi đẩy về OpenSearch.
-
 AWS Kinesis is a service that helps you to build an application capable of analyzing and processin data in real time, capable of receiving and storing up to terrabytes of data in an hour, capable of collecting data from different sources like logs, live stream...
 
 Now, AWS Kinesis consists of 4 components:

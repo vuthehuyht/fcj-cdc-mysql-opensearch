@@ -1,9 +1,9 @@
 ---
 title : "Các bước chuẩn bị"
 date :  "`r Sys.Date()`" 
-weight: 2
+weight: 5
 chapter: false
-pre: "<b> 2. </b>"
+pre: "<b> 2.5 </b>"
 ---
 
 Trước khi bắt tay vào triển khai phương pháp này, chúng ta điểm qua về một số dịch vụ được sử dụng trong bài lab.
