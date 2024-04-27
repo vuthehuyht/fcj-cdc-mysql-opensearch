@@ -1,9 +1,9 @@
 ---
 title : "Preparation"
 date :  "`r Sys.Date()`" 
-weight: 5
+weight: 2
 chapter: false
-pre: "<b> 2.5 </b>"
+pre: "<b> 2. </b>"
 ---
 
 Before getting started to deploy this method, let's take a look some of the services used in the lab.
