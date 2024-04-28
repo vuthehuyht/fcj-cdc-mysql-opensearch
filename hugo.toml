@@ -1,4 +1,4 @@
-canonifyURLs = true
+canonifyURLs = true
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
@@ -25,15 +25,21 @@ weight = 1
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "https://aws.amazon.com/blogs"
-weight = 20
-
-[[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group - FB Group"
 identifier = "AWS Study Group FB"
 url = "https://www.facebook.com/groups/awsstudygroupfcj"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-linkedin'></i> Author's Linkedin"
+identifier = "Linkedin"
+url = "https://www.linkedin.com/in/vuthehuyht"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Author's GitHub"
+identifier = "GitHub"
+url = "https://github.com/vuthehuyht"
 weight = 20
 
 [Languages.vi]
@@ -42,14 +48,19 @@ weight = 2
 languageName = "Tiếng Việt"
 
 [[Languages.vi.menu.shortcuts]]
-name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
-identifier = "AWS Study Group"
-url = "http://awsstudygroup.com"
-weight = 20
-
-[[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB"
 identifier = "AWS Study Group FB"
 url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fab fa-linkedin'></i> Author's Linkedin"
+identifier = "Linkedin"
+url = "https://www.linkedin.com/in/vuthehuyht"
+weight = 20
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Author's GitHub"
+identifier = "GitHub"
+url = "https://github.com/vuthehuyht"
+weight = 20
