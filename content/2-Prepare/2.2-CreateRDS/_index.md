@@ -63,18 +63,17 @@ Database configuration
     + **Maintenance**: untick **Enable auto minor version upgrade**
 - Other items are left as default
 
-![2.4-step-1](../../../images/rds-7.png)
-![2.4-step-1](../../../images/rds-8.png)
-![2.4-step-1](../../../images/rds-9.png)
-![2.4-step-1](../../../images/rds-10.png)
-![2.4-step-1](../../../images/rds-11.png)
-![2.4-step-1](../../../images/rds-12.png)
-![2.4-step-1](../../../images/rds-13.png)
-![2.4-step-1](../../../images/rds-14.png)
+![2.4-step-1](/images/rds-7.png)
+![2.4-step-1](/images/rds-8.png)
+![2.4-step-1](/images/rds-9.png)
+![2.4-step-1](/images/rds-10.png)
+![2.4-step-1](/images/rds-11.png)
+![2.4-step-1](/images/rds-12.png)
+![2.4-step-1](/images/rds-13.png)
+![2.4-step-1](/images/rds-14.png)
 
 **Note**: The database creation process will take quite a long time, about 10 minutes.
 
 After creation done, we need to verify `MySQL bin log` is enabled
 - Connecting to RDS by terminal: `mysql -h rds_enpoint -u admin -p`, then enter password
 - Enter `show global variables like "log_bin`, if the result get **log_bin ON**, it will be OK
-

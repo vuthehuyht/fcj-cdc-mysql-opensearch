@@ -12,7 +12,6 @@ Before getting started to deploy this method, let's take a look some of the serv
 **AWS RDS** is the one of typical services of AWS, used very much and popular. In the lab, RDS will be the beginning point.
 
 #### AWS Lambda
-**AWS Lambda** là một dịch vụ điện toán phi máy chủ, theo định hướng sự kiện (hiểu nôm na là khi nào có request đến thì nó mới chạy), giúp cho chúng ta chạy code hầu hết mọi loại application hoặc backend service mà không cần cung cấp hay quản lý máy chủ. **AWS Lambda** có thể được kích hoạt từ hơn 200 dịch vụ của AWS và các application dưới dạng SaaS và chúng ta chỉ cần trả phí theo mức sử dụng.
 **AWS Lambda** is a serverless computing service, an event-driven (it means when request coming, service works), help us run code for almost any type of application or backend service without needing to provision or manage server. **AWS Lambda** can be enabled from more than 200+ AWS services and application as SaaS and we only need to pay as we use. 
 
 #### AWS EC2

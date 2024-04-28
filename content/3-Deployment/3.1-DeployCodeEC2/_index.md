@@ -12,7 +12,7 @@ Run **MobaXterm**, choose **Session** -> **SSH**
 - **Remote host**:  Enter public IP of EC2 created in [2.4](/2-prepare/2.4-createec2/)
 - Tick **Specify username** và enter **ubuntu**
 - Choose **Advance SSH Settings**, tick **Use private key** and path of pem file downloaded in [2.4](/2-prepare/2.4-createec2/)
-![2.4-step-1](../../../images/deploy-1.png)
+![2.4-step-1](/images/deploy-1.png)
 
 Install **python 3.12** and **pip** by running the following commands
 ```
@@ -86,5 +86,5 @@ Install these dependencies by `pip install -r requirements.txt` command
 Then, let's run a test to see if the code has run successfully by `python3 listener.py` command
 
 The result as image is code running successufully
-![2.4-step-1](../../../images/deploy-2.png)
+![2.4-step-1](/images/deploy-2.png)
 
