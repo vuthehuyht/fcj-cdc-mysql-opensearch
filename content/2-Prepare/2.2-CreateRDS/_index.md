@@ -10,19 +10,19 @@ pre: "<b> 2.2 </b>"
 
 Tại ô tìm kiếm, tìm và chọn "Security Groups"
 On the search bar, search and choose "Security Groups"
-![2.4-step-1](../../../images/rds-1.png)
+![2.4-step-1](/images/rds-1.png)
 
 On navigation interface, choose **Create security group**
-![2.4-step-1](../../../images/rds-2.png)
+![2.4-step-1](/images/rds-2.png)
 
 - On **Security group name** section, enter `cdc-mysql-sg`
 - On **VPC**, choose `vpc-cdc`
-![2.4-step-1](../../../images/rds-3.png)
+![2.4-step-1](/images/rds-3.png)
 
 On **Inbound rules** item, choose **Add rule** and enter informations:
 - Type: `MySQL/Aurora`
 - Source: **0.0.0.0**
-![2.4-step-1](../../../images/rds-4.png)
+![2.4-step-1](/images/rds-4.png)
 
 Cuối cùng, chọn **Create security group** để tạo SG.
 Lastly, click **Create security group** to create.
@@ -30,22 +30,22 @@ Lastly, click **Create security group** to create.
 2. Creating **Parameter Group** for RDS MySQL
 
 At left navigation bar of the RDS interface, choose **Parameter groups** -> **Create parameter group**
-![2.4-step-1](../../../images/rds-5.png)
+![2.4-step-1](/images/rds-5.png)
 
 - At **Parameter group family**, choose **mysql8.0**
 - At **Group Name**, enter `cdc-group`
 - Choose **Create**
-![2.4-step-1](../../../images/rds-6.png)
+![2.4-step-1](/images/rds-6.png)
 
 3. Creating RDS for MySQL
 
 Navigate to database creation page
 - On navigation bar, search and choose **RDS**
-![2.4-step-2](../../../images/2.4-step-1.png)
+![2.4-step-2](/images/2.4-step-1.png)
 
 At RDS interface
 - Choose **Create database**
-![2.4-step-2](../../../images/2.4-step-2.png)
+![2.4-step-2](/images/2.4-step-2.png)
 
 Database configuration
 - **Choose a database creation method**: choose **Standard create**
