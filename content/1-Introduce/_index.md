@@ -11,7 +11,7 @@ pre : " <b> 1. </b> "
 In this lab, we will perform collecting change in data from RDS for MySQL to OpenSearch to be able to serve different requirements. This lab is just the most base, you can also improve or customize it according to different requirements to make it mosit suitable.
 
 The following method flow
-![CDC Flow](../../images/cdc-flow.png)
+![CDC Flow](images/cdc-flow.png)
 
 - We create, update or delete record with RDS for MySQL
 - EC2 run code that listen for record creation, update or deletion event and push the content of event into Kinesis
